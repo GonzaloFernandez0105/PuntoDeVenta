@@ -12,9 +12,12 @@ namespace PuntoDeVenta1
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
+            dataGridView1.Rows.Add("Café", 2, 300, 100);
+           
         }
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,12 +62,62 @@ namespace PuntoDeVenta1
 
         private void label6_Click(object sender, EventArgs e)
         {
-
+       
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Now;
+            lblFecha.Text = fecha.ToString("dd/MM/yy");
+
+            lblHora.Text = fecha.ToString("HH:mm:ss");
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+            lblTotal.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void txtEfectivo_TextChanged(object sender, EventArgs e)
+        {
+          
+
+        }
+
+        private void btnCobrarEfectivo_Click(object sender, EventArgs e)
+        {
+            int Total, Efectivo, Vuelto;
+            if (int.TryParse(txtEfectivo.Text, out Efectivo) && int.TryParse(lblTotal.Text, out Total))
+            {
+               Vuelto = Total - Efectivo;
+                lblVuelto.Text = Vuelto.ToString();
+            }
+
+        }
+
+        private void lblVuelto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
