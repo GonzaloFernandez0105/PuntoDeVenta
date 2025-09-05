@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\puntodeventa1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|solutionrelative:puntodeventa1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|c:\\users\\user\\onedrive\\desktop\\puntoventa\\puntodeventa\\pos\\puntodeventa1\\productolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|solutionrelative:puntodeventa1\\productolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|c:\\users\\user\\onedrive\\desktop\\puntoventa\\puntodeventa\\pos\\puntodeventa1\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\puntodeventa1\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|solutionrelative:puntodeventa1\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|c:\\users\\user\\onedrive\\desktop\\puntoventa\\puntodeventa\\pos\\puntodeventa1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|solutionrelative:puntodeventa1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|c:\\users\\user\\onedrive\\desktop\\puntoventa\\puntodeventa\\pos\\puntodeventa1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|solutionrelative:puntodeventa1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|c:\\users\\user\\onedrive\\desktop\\puntoventa\\puntodeventa\\pos\\puntodeventa1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\puntodeventa1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|solutionrelative:puntodeventa1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\puntodeventa1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9AB1B4E-AB53-4691-9F37-A204BA0631C9}|PuntoDeVenta1\\PuntoDeVenta1.csproj|solutionrelative:puntodeventa1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +30,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 173,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\PuntoDeVenta1\\Program.cs",
+              "RelativeDocumentMoniker": "PuntoDeVenta1\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\PuntoDeVenta1\\Program.cs",
+              "RelativeToolTip": "PuntoDeVenta1\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T02:42:06.069Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -42,59 +56,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProductoLista.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\PuntoDeVenta1\\ProductoLista.cs",
               "RelativeDocumentMoniker": "PuntoDeVenta1\\ProductoLista.cs",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\PuntoDeVenta1\\ProductoLista.cs",
               "RelativeToolTip": "PuntoDeVenta1\\ProductoLista.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACQAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-05T03:41:59.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Producto.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\PuntoDeVenta1\\Producto.cs",
               "RelativeDocumentMoniker": "PuntoDeVenta1\\Producto.cs",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\PuntoDeVenta1\\Producto.cs",
               "RelativeToolTip": "PuntoDeVenta1\\Producto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-05T03:31:29.079Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\PuntoDeVenta1\\Form1.cs",
               "RelativeDocumentMoniker": "PuntoDeVenta1\\Form1.cs",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\PuntoDeVenta1\\Form1.cs",
               "RelativeToolTip": "PuntoDeVenta1\\Form1.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAAAF0AAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAAJ0AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-05T02:52:15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\PuntoDeVenta1\\Program.cs",
-              "RelativeDocumentMoniker": "PuntoDeVenta1\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\PuntoDeVenta1\\Program.cs",
-              "RelativeToolTip": "PuntoDeVenta1\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAACMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-05T02:42:06.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\PuntoVenta\\PuntoDeVenta\\POS\\PuntoDeVenta1\\Form1.cs",
               "RelativeDocumentMoniker": "PuntoDeVenta1\\Form1.cs",

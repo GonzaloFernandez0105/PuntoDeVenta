@@ -146,6 +146,24 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="buscarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="buscarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="ventaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="ventaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Historial de ventas</value>
+  </data>
+  <data name="proToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="proToolStripMenuItem.Text" xml:space="preserve">
+    <value>Stock</value>
+  </data>
   <data name="archivoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 20</value>
   </data>
@@ -153,13 +171,13 @@
     <value>Herramientas</value>
   </data>
   <data name="calculadoraToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>137, 22</value>
   </data>
   <data name="calculadoraToolStripMenuItem.Text" xml:space="preserve">
     <value>Calculadora</value>
   </data>
   <data name="notasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>137, 22</value>
   </data>
   <data name="notasToolStripMenuItem.Text" xml:space="preserve">
     <value>Notas</value>
@@ -170,23 +188,17 @@
   <data name="analizarToolStripMenuItem.Text" xml:space="preserve">
     <value>Analizar</value>
   </data>
-  <data name="buscarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
+  <data name="archivoToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
   </data>
-  <data name="buscarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Buscar</value>
+  <data name="archivoToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Archivo</value>
   </data>
-  <data name="ventaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+  <data name="usuarioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 22</value>
   </data>
-  <data name="ventaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Historial de ventas</value>
-  </data>
-  <data name="proToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="proToolStripMenuItem.Text" xml:space="preserve">
-    <value>Stock</value>
+  <data name="usuarioToolStripMenuItem.Text" xml:space="preserve">
+    <value>Usuario</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnMP.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -606,6 +618,51 @@
   <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <metadata name="NombreProd.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="NombreProd.HeaderText" xml:space="preserve">
+    <value>Nombre Del Producto</value>
+  </data>
+  <data name="NombreProd.Width" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <metadata name="CodigoSKU.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="CodigoSKU.HeaderText" xml:space="preserve">
+    <value>Codigo Del Producto</value>
+  </data>
+  <data name="CodigoSKU.Width" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <metadata name="Precio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Precio.HeaderText" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="Precio.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <metadata name="Cantidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Cantidad.HeaderText" xml:space="preserve">
+    <value>Cantidad</value>
+  </data>
+  <data name="Cantidad.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <metadata name="Stock.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Stock.HeaderText" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="Stock.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
   <data name="dataGridView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -616,7 +673,7 @@
     <value>None</value>
   </data>
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1190, 526</value>
+    <value>1141, 526</value>
   </data>
   <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -634,10 +691,10 @@
     <value>0</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 213</value>
+    <value>25, 213</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1190, 526</value>
+    <value>1141, 526</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -826,7 +883,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 759</value>
+    <value>19, 759</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 20</value>
@@ -2734,6 +2791,72 @@
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="button2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 310</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 53</value>
+  </data>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Ver Ticket</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="button4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-340, 113</value>
+  </data>
+  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 50</value>
+  </data>
+  <data name="button4.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Fiambres</value>
+  </data>
+  <data name="&gt;&gt;button4.Name" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -2878,72 +3001,6 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="button4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="button4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-340, 113</value>
-  </data>
-  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 50</value>
-  </data>
-  <data name="button4.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="button4.Text" xml:space="preserve">
-    <value>Fiambres</value>
-  </data>
-  <data name="&gt;&gt;button4.Name" xml:space="preserve">
-    <value>button4</value>
-  </data>
-  <data name="&gt;&gt;button4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
-    <value>listView1</value>
-  </data>
-  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 805</value>
-  </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>903, 149</value>
-  </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="listView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -2968,50 +3025,26 @@
   <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 805</value>
   </data>
-  <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>903, 149</value>
   </data>
-  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 310</value>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 53</value>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Ver Ticket</value>
-  </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
-  </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="archivoToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="archivoToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Archivo</value>
-  </data>
-  <data name="usuarioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="usuarioToolStripMenuItem.Text" xml:space="preserve">
-    <value>Usuario</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3027,6 +3060,24 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;buscarToolStripMenuItem.Name" xml:space="preserve">
+    <value>buscarToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;buscarToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ventaToolStripMenuItem.Name" xml:space="preserve">
+    <value>ventaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ventaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proToolStripMenuItem.Name" xml:space="preserve">
+    <value>proToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;proToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;archivoToolStripMenuItem.Name" xml:space="preserve">
     <value>archivoToolStripMenuItem</value>
@@ -3052,30 +3103,6 @@
   <data name="&gt;&gt;analizarToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;buscarToolStripMenuItem.Name" xml:space="preserve">
-    <value>buscarToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;buscarToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ventaToolStripMenuItem.Name" xml:space="preserve">
-    <value>ventaToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ventaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;proToolStripMenuItem.Name" xml:space="preserve">
-    <value>proToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;proToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
-    <value>timer1</value>
-  </data>
-  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;archivoToolStripMenuItem1.Name" xml:space="preserve">
     <value>archivoToolStripMenuItem1</value>
   </data>
@@ -3087,6 +3114,42 @@
   </data>
   <data name="&gt;&gt;usuarioToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
+    <value>timer1</value>
+  </data>
+  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NombreProd.Name" xml:space="preserve">
+    <value>NombreProd</value>
+  </data>
+  <data name="&gt;&gt;NombreProd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CodigoSKU.Name" xml:space="preserve">
+    <value>CodigoSKU</value>
+  </data>
+  <data name="&gt;&gt;CodigoSKU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Precio.Name" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="&gt;&gt;Precio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Cantidad.Name" xml:space="preserve">
+    <value>Cantidad</value>
+  </data>
+  <data name="&gt;&gt;Cantidad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Stock.Name" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="&gt;&gt;Stock.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form1</value>

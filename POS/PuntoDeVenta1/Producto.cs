@@ -10,7 +10,7 @@ namespace PuntoDeVenta1
     internal class Producto
     {
         public string Nombre { get; set; }
-        public int CodProducto { get; set; }
+        public long CodProducto { get; set; }
         public int PrecioUnitario { get; set; }     
         public int stock { get; set; }
 

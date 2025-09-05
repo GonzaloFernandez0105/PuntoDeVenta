@@ -20,20 +20,7 @@ namespace PuntoDeVenta1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            //
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
-            try
-            {
-                conexion.ConnectionString = "Server=GonzaPc\\SQLEXPRESS; database=PuntoDeVenta; integrated security=true";
-                comando.CommandType = System.Data.CommandType.Text;
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+          
         }
     }
 }

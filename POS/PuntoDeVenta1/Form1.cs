@@ -90,8 +90,7 @@ public Form1()
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ProductoLista lista = new ProductoLista();
-            dataGridView1.DataSource = lista.Listar();
+          
         }
 
         private void lblTotal_Click(object sender, EventArgs e)
@@ -123,6 +122,43 @@ public Form1()
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            List<Producto> productos = new List<Producto>();
+
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+           
+                conexion.ConnectionString = "server=GonzaPc\\SQLEXPRESS; database=PuntoDeVenta; integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "Select Nombre, CodigoSKU, PrecioUnitario, StockDisponible from Producto";
+                comando.Connection = conexion;
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+
+                /*  while (lector.Read()) 
+                  {
+                      Producto producto = new Producto();
+                      producto.Nombre = (string)lector["Nombre"];
+                      producto.CodProducto = Convert.ToInt64(lector["CodigoSKU"]);
+                      producto.PrecioUnitario = Convert.ToInt32(lector["PrecioUnitario"]);
+                      producto.stock = Convert.ToInt32(lector["StockDisponible"]);
+                      productos.Add(producto);
+                 }*/
+
+               
+            
+            while (lector.Read())
+            {
+                int rowIndex = dataGridView1.Rows.Add(); // Agrega una nueva fila
+
+                dataGridView1.Rows[rowIndex].Cells[0].Value = lector["Nombre"];           // Nombre Del Producto
+                dataGridView1.Rows[rowIndex].Cells[1].Value = lector["CodigoSKU"];        // Codigo Del Producto
+                dataGridView1.Rows[rowIndex].Cells[2].Value = lector["PrecioUnitario"];   // Precio
+           //     dataGridView1.Rows[rowIndex].Cells[3].Value = lector["Cantidad"];         // Cantidad
+                dataGridView1.Rows[rowIndex].Cells[4].Value = lector["StockDisponible"];  // Stock
+            }
+            conexion.Close();
 
         }
 
