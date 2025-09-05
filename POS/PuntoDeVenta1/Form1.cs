@@ -7,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PuntoDeVenta1
 {
     public partial class Form1 : Form
     {
         
-        public Form1()
+
+public Form1()
         {
-            InitializeComponent();
-            dataGridView1.Rows.Add("Café", 2, 300, 100);
-           
+            InitializeComponent();        
         }
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,7 +90,8 @@ namespace PuntoDeVenta1
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            ProductoLista lista = new ProductoLista();
+            dataGridView1.DataSource = lista.Listar();
         }
 
         private void lblTotal_Click(object sender, EventArgs e)
@@ -121,6 +122,21 @@ namespace PuntoDeVenta1
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMP_Click(object sender, EventArgs e)
+        {
+            int Total, Efectivo, Vuelto;
+            if (int.TryParse(txtEfectivo.Text, out Efectivo) && int.TryParse(lblTotal.Text, out Total))
+            {
+                Vuelto = Total - Efectivo;
+                lblVuelto.Text = Vuelto.ToString();
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
