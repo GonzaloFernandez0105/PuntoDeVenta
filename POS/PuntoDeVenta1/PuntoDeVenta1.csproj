@@ -53,7 +53,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Producto.cs" />
-    <Compile Include="ProductoLista.cs" />
+    <Compile Include="ProductosDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.es-AR.resx">

@@ -20,6 +20,12 @@ public Form1()
             InitializeComponent();        
         }
 
+
+        private void Form1_Load(object sender, EventArgs e)
+        {          
+        }
+
+                         //Seccion Display
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -47,7 +53,8 @@ public Form1()
 
         private void btnCancelarVenta_Click(object sender, EventArgs e)
         {
-
+            dataGridView1.Rows.Clear();
+            lblTotal.Text = "0,00";
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -95,7 +102,7 @@ public Form1()
 
         private void lblTotal_Click(object sender, EventArgs e)
         {
-            lblTotal.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+           
         }
 
         private void txtEfectivo_TextChanged(object sender, EventArgs e)
@@ -107,12 +114,16 @@ public Form1()
         private void btnCobrarEfectivo_Click(object sender, EventArgs e)
         {
             int Total, Efectivo, Vuelto;
-            if (int.TryParse(txtEfectivo.Text, out Efectivo) && int.TryParse(lblTotal.Text, out Total))
-            {
-               Vuelto = Total - Efectivo;
-                lblVuelto.Text = Vuelto.ToString();
-            }
-
+            
+                if (int.TryParse(txtEfectivo.Text, out Efectivo) && int.TryParse(lblTotal.Text, out Total))
+                {
+                Vuelto = Efectivo - Total;
+                
+                    
+                    lblVuelto.Text = Vuelto.ToString();                                                       // Arreglar error if(Vuelto<0)
+                    dataGridView1.Rows.Clear();
+                    lblTotal.Text = "0,00";
+                }
         }
 
         private void lblVuelto_Click(object sender, EventArgs e)
@@ -120,59 +131,93 @@ public Form1()
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            List<Producto> productos = new List<Producto>();
-
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
-           
-                conexion.ConnectionString = "server=GonzaPc\\SQLEXPRESS; database=PuntoDeVenta; integrated security=true";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Nombre, CodigoSKU, PrecioUnitario, StockDisponible from Producto";
-                comando.Connection = conexion;
-                conexion.Open();
-                lector = comando.ExecuteReader();
 
 
-                /*  while (lector.Read()) 
-                  {
-                      Producto producto = new Producto();
-                      producto.Nombre = (string)lector["Nombre"];
-                      producto.CodProducto = Convert.ToInt64(lector["CodigoSKU"]);
-                      producto.PrecioUnitario = Convert.ToInt32(lector["PrecioUnitario"]);
-                      producto.stock = Convert.ToInt32(lector["StockDisponible"]);
-                      productos.Add(producto);
-                 }*/
-
-               
-            
-            while (lector.Read())
-            {
-                int rowIndex = dataGridView1.Rows.Add(); // Agrega una nueva fila
-
-                dataGridView1.Rows[rowIndex].Cells[0].Value = lector["Nombre"];           // Nombre Del Producto
-                dataGridView1.Rows[rowIndex].Cells[1].Value = lector["CodigoSKU"];        // Codigo Del Producto
-                dataGridView1.Rows[rowIndex].Cells[2].Value = lector["PrecioUnitario"];   // Precio
-           //     dataGridView1.Rows[rowIndex].Cells[3].Value = lector["Cantidad"];         // Cantidad
-                dataGridView1.Rows[rowIndex].Cells[4].Value = lector["StockDisponible"];  // Stock
-            }
-            conexion.Close();
-
-        }
-
+        // Boton de Mercado Pago
         private void btnMP_Click(object sender, EventArgs e)
         {
             int Total, Efectivo, Vuelto;
+
             if (int.TryParse(txtEfectivo.Text, out Efectivo) && int.TryParse(lblTotal.Text, out Total))
             {
-                Vuelto = Total - Efectivo;
-                lblVuelto.Text = Vuelto.ToString();
+                Vuelto = Efectivo - Total;
+
+
+                lblVuelto.Text = Vuelto.ToString();                                                       // Arreglar error if(Vuelto<0)
+                dataGridView1.Rows.Clear();
+                lblTotal.Text = "0,00";
             }
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarCod_TextChanged(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        public void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            string codigo = txtBuscarCod.Text.Trim();
+            Producto producto = ProductosDB.BuscarPorCodigo(long.Parse(codigo));
+                
+            if (producto != null)
+            {
+                bool productoYaExiste = false;
+
+               
+                //Este foreach recorre la lista en caso de que se repita en vez de agregar otra fila suma a la  columna cantidad.
+                foreach (DataGridViewRow fila in dataGridView1.Rows)
+                {
+                    if (fila.Cells[1].Value != null && fila.Cells[1].Value.ToString() == producto.CodProducto.ToString())
+                    {
+                        // Ya existe: sumamos 1 a la cantidad
+                        int cantidadActual = Convert.ToInt32(fila.Cells[3].Value) + 1 ;
+                        fila.Cells[4].Value = cantidadActual;
+                        int preciomod = (producto.PrecioUnitario * cantidadActual);
+                        fila.Cells[3].Value = preciomod;                      
+                        productoYaExiste = true;
+                        lblTotal.Text = preciomod.ToString();
+                        break;
+                       
+                    }
+
+
+                }
+                // en caso de que no se repita el producto se agrega como nueva fila normalmente.
+                if (!productoYaExiste)
+                {
+                    // No existe: agregamos nueva fila con cantidad 1
+                    int rowIndex = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[rowIndex].Cells[0].Value = producto.Nombre;
+                    dataGridView1.Rows[rowIndex].Cells[1].Value = producto.CodProducto;
+                    dataGridView1.Rows[rowIndex].Cells[2].Value = producto.PrecioUnitario;
+                    dataGridView1.Rows[rowIndex].Cells[3].Value = producto.PrecioUnitario * int.Parse(txtCantidad.Text);
+                    dataGridView1.Rows[rowIndex].Cells[4].Value = int.Parse(txtCantidad.Text);
+                    dataGridView1.Rows[rowIndex].Cells[5].Value = producto.stock;
+
+                    lblTotal.Text =  producto.PrecioUnitario.ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Producto no encontrado.");
+            }
+            
+           
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
