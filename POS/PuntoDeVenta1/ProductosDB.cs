@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,10 +32,38 @@ public static class ProductosDB
                         stock = Convert.ToInt32(lector["StockDisponible"])
                     };
                 }
-
                 return null;
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public static List<Producto> ListarTodos()
         {
@@ -58,8 +87,10 @@ public static class ProductosDB
                 }
 
                 return productos;
-            }
+            }            
         }
+      
+
     }
 
 }

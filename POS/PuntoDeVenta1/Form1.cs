@@ -22,10 +22,11 @@ public Form1()
 
 
         private void Form1_Load(object sender, EventArgs e)
-        {          
+        {    
+            
         }
 
-                         //Seccion Display
+                         
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -114,17 +115,28 @@ public Form1()
         private void btnCobrarEfectivo_Click(object sender, EventArgs e)
         {
             int Total, Efectivo, Vuelto;
-            
-                if (int.TryParse(txtEfectivo.Text, out Efectivo) && int.TryParse(lblTotal.Text, out Total))
-                {
+
+            if (int.TryParse(txtEfectivo.Text, out Efectivo) && int.TryParse(lblTotal.Text, out Total))
+            {
                 Vuelto = Efectivo - Total;
-                
-                    
-                    lblVuelto.Text = Vuelto.ToString();                                                       // Arreglar error if(Vuelto<0)
-                    dataGridView1.Rows.Clear();
-                    lblTotal.Text = "0,00";
-                }
+
+
+                lblVuelto.Text = Vuelto.ToString();
+                dataGridView1.Rows.Clear();
+                lblTotal.Text = "0,00";
+                txtBuscarCod.Clear();
+
+            }
+            string cadenaConexion = "server=GonzaPc\\SQLEXPRESS; DATABASE=PuntoDeVenta; integrated security=true";
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            using (SqlCommand comando = new SqlCommand("SELECT * FROM Producto WHERE CodigoSKU = @codigo", conexion))
+            {
+             
+             
+             
+            }
         }
+
 
         private void lblVuelto_Click(object sender, EventArgs e)
         {
@@ -143,9 +155,11 @@ public Form1()
                 Vuelto = Efectivo - Total;
 
 
-                lblVuelto.Text = Vuelto.ToString();                                                       // Arreglar error if(Vuelto<0)
+                lblVuelto.Text = Vuelto.ToString();                                                       
                 dataGridView1.Rows.Clear();
                 lblTotal.Text = "0,00";
+                txtBuscarCod.Clear();
+
             }
         }
 
@@ -176,17 +190,16 @@ public Form1()
                     if (fila.Cells[1].Value != null && fila.Cells[1].Value.ToString() == producto.CodProducto.ToString())
                     {
                         // Ya existe: sumamos 1 a la cantidad
-                        int cantidadActual = Convert.ToInt32(fila.Cells[3].Value) + 1 ;
+                        int cantidadActual = Convert.ToInt32(fila.Cells[4].Value) + 1 ;
                         fila.Cells[4].Value = cantidadActual;
                         int preciomod = (producto.PrecioUnitario * cantidadActual);
                         fila.Cells[3].Value = preciomod;                      
                         productoYaExiste = true;
                         lblTotal.Text = preciomod.ToString();
-                        break;
-                       
+                       int nuevoStock = producto.stock - cantidadActual;
+                        fila.Cells[5].Value = nuevoStock;
+                        break;                   
                     }
-
-
                 }
                 // en caso de que no se repita el producto se agrega como nueva fila normalmente.
                 if (!productoYaExiste)
@@ -201,14 +214,17 @@ public Form1()
                     dataGridView1.Rows[rowIndex].Cells[5].Value = producto.stock;
 
                     lblTotal.Text =  producto.PrecioUnitario.ToString();
+                   
                 }
             }
             else
             {
                 MessageBox.Show("Producto no encontrado.");
             }
-            
            
+
+
+
 
         }
 
@@ -220,6 +236,12 @@ public Form1()
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            BuscadorProducto buscadorProducto = new BuscadorProducto();
+            buscadorProducto.Show();
         }
     }
 }

@@ -56,6 +56,12 @@
             this.btnSumar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NombreProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoSKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.txtBuscarCod = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -90,17 +96,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.NombreProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoSKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buscarProducto = new System.Windows.Forms.Button();
+            this.detallesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -171,12 +176,18 @@
             // archivoToolStripMenuItem1
             // 
             this.archivoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuarioToolStripMenuItem});
+            this.usuarioToolStripMenuItem,
+            this.crearNuevoUsuarioToolStripMenuItem,
+            this.cambiarDeUsuarioToolStripMenuItem,
+            this.cerrarCajaToolStripMenuItem});
             this.archivoToolStripMenuItem1.Name = "archivoToolStripMenuItem1";
             resources.ApplyResources(this.archivoToolStripMenuItem1, "archivoToolStripMenuItem1");
             // 
             // usuarioToolStripMenuItem
             // 
+            this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.detallesToolStripMenuItem,
+            this.configurarDatosToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
             resources.ApplyResources(this.usuarioToolStripMenuItem, "usuarioToolStripMenuItem");
             // 
@@ -301,6 +312,44 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // NombreProd
+            // 
+            resources.ApplyResources(this.NombreProd, "NombreProd");
+            this.NombreProd.Name = "NombreProd";
+            this.NombreProd.ReadOnly = true;
+            this.NombreProd.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // CodigoSKU
+            // 
+            resources.ApplyResources(this.CodigoSKU, "CodigoSKU");
+            this.CodigoSKU.Name = "CodigoSKU";
+            this.CodigoSKU.ReadOnly = true;
+            this.CodigoSKU.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // PrecioUnitario
+            // 
+            resources.ApplyResources(this.PrecioUnitario, "PrecioUnitario");
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            resources.ApplyResources(this.Precio, "Precio");
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            resources.ApplyResources(this.Cantidad, "Cantidad");
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Stock
+            // 
+            resources.ApplyResources(this.Stock, "Stock");
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            // 
             // lblBuscar
             // 
             resources.ApplyResources(this.lblBuscar, "lblBuscar");
@@ -362,6 +411,7 @@
             // 
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
@@ -547,6 +597,7 @@
             // 
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label17);
             this.panel6.Controls.Add(this.label10);
             this.panel6.Controls.Add(this.label6);
@@ -554,10 +605,16 @@
             this.panel6.Controls.Add(this.lblFecha);
             this.panel6.Name = "panel6";
             // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            // 
             // panel7
             // 
             resources.ApplyResources(this.panel7, "panel7");
             this.panel7.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.button8);
             this.panel7.Controls.Add(this.button3);
             this.panel7.Controls.Add(this.button9);
@@ -578,61 +635,44 @@
             resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
             // 
-            // button10
+            // buscarProducto
             // 
-            resources.ApplyResources(this.button10, "button10");
-            this.button10.Name = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.buscarProducto, "buscarProducto");
+            this.buscarProducto.Name = "buscarProducto";
+            this.buscarProducto.UseVisualStyleBackColor = true;
+            this.buscarProducto.Click += new System.EventHandler(this.button10_Click);
             // 
-            // label17
+            // detallesToolStripMenuItem
             // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
+            this.detallesToolStripMenuItem.Name = "detallesToolStripMenuItem";
+            resources.ApplyResources(this.detallesToolStripMenuItem, "detallesToolStripMenuItem");
             // 
-            // NombreProd
+            // configurarDatosToolStripMenuItem
             // 
-            resources.ApplyResources(this.NombreProd, "NombreProd");
-            this.NombreProd.Name = "NombreProd";
-            this.NombreProd.ReadOnly = true;
-            this.NombreProd.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.configurarDatosToolStripMenuItem.Name = "configurarDatosToolStripMenuItem";
+            resources.ApplyResources(this.configurarDatosToolStripMenuItem, "configurarDatosToolStripMenuItem");
             // 
-            // CodigoSKU
+            // crearNuevoUsuarioToolStripMenuItem
             // 
-            resources.ApplyResources(this.CodigoSKU, "CodigoSKU");
-            this.CodigoSKU.Name = "CodigoSKU";
-            this.CodigoSKU.ReadOnly = true;
-            this.CodigoSKU.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
+            resources.ApplyResources(this.crearNuevoUsuarioToolStripMenuItem, "crearNuevoUsuarioToolStripMenuItem");
             // 
-            // PrecioUnitario
+            // cambiarDeUsuarioToolStripMenuItem
             // 
-            resources.ApplyResources(this.PrecioUnitario, "PrecioUnitario");
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
+            this.cambiarDeUsuarioToolStripMenuItem.Name = "cambiarDeUsuarioToolStripMenuItem";
+            resources.ApplyResources(this.cambiarDeUsuarioToolStripMenuItem, "cambiarDeUsuarioToolStripMenuItem");
             // 
-            // Precio
+            // cerrarCajaToolStripMenuItem
             // 
-            resources.ApplyResources(this.Precio, "Precio");
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            resources.ApplyResources(this.Cantidad, "Cantidad");
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // Stock
-            // 
-            resources.ApplyResources(this.Stock, "Stock");
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
+            this.cerrarCajaToolStripMenuItem.Name = "cerrarCajaToolStripMenuItem";
+            resources.ApplyResources(this.cerrarCajaToolStripMenuItem, "cerrarCajaToolStripMenuItem");
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.PapayaWhip;
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.button10);
+            this.Controls.Add(this.buscarProducto);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.menuStrip1);
@@ -736,7 +776,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button buscarProducto;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoSKU;
@@ -744,6 +784,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.ToolStripMenuItem detallesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configurarDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearNuevoUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarDeUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarCajaToolStripMenuItem;
     }
 }
 
